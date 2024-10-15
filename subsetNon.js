@@ -2,7 +2,7 @@ const backTrack = (start, currentSubset, array, memo) => {
     //base case
     if(start >= array.length){
         const sum = currentSubset.reduce((acc, num) => acc + num, 0);
-        console.log(`Subconjunto: ${currentSubset}, Suma: ${sum}`);
+        //console.log(`Subconjunto: ${currentSubset}, Suma: ${sum}`);
 
         memo.push(sum);
         return;
@@ -31,4 +31,5 @@ const findMaxSubsetSum = (array) => {
 }
 
 //console.log(backTrack(0,[], [-2,1,3,-4,5]));
-console.log(findMaxSubsetSum([-2,1,3,-4,5]))
+console.log(findMaxSubsetSum([-2,1,3,-4,5]));
+console.log(findMaxSubsetSum([1,2,3,4,5,6,7,8,9,-10,-11,-12,-13,14,15,16,17,-18,-19,20]));
